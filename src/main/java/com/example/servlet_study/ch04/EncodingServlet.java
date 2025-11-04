@@ -12,13 +12,20 @@ import java.nio.charset.StandardCharsets;
 @WebServlet("/ch04/encoding")
 public class EncodingServlet extends HttpServlet {
 
+
+    // encoding 수행 doGet 메서드
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         req.setCharacterEncoding(StandardCharsets.UTF_8.name());
+
         String data = req.getParameter("data");
+
         System.out.println(data);
     }
 
+
+    // encoding 수행 doPost 메서드
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        req.setCharacterEncoding(StandardCharsets.UTF_8.name());
