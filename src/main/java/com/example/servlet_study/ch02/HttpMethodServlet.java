@@ -83,12 +83,16 @@ import java.util.Map;
 @WebServlet("/ch02/method")
 public class HttpMethodServlet extends HttpServlet {
 
+
+    // datas맵 으로
     Map<String, String > datas = new HashMap<>(Map.of(
             "name" , "김준일",
             "age" , "32",
             "address" , "동래구"
     ));
 
+
+    // doGet 메서드 오버라이드
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("GET 요청 들어옴");
@@ -106,6 +110,8 @@ public class HttpMethodServlet extends HttpServlet {
         // 응답부
         resp.setContentType("text/html");
         resp.setCharacterEncoding(StandardCharsets.UTF_8.name()); // 문자 인코딩 -> 한글 출력되도록
+
+        // PrintWriter
         PrintWriter out = resp.getWriter();
         out.println(datas.get(datasKey));
 

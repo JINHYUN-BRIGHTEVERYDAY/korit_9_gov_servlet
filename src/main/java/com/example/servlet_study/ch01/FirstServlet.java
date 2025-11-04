@@ -19,6 +19,7 @@ public class FirstServlet extends HttpServlet {
 
 
 
+    // init 메서드
     @Override
     public void init(ServletConfig config) throws ServletException {
         System.out.println("초기화");
@@ -27,6 +28,7 @@ public class FirstServlet extends HttpServlet {
 
 
 
+    // destroy 메서드
     @Override
     public void destroy() {
         System.out.println("소멸");
@@ -34,6 +36,7 @@ public class FirstServlet extends HttpServlet {
 
 
 
+    // service 메서드
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("서비스 메서드 요청 들어옴");
@@ -41,6 +44,7 @@ public class FirstServlet extends HttpServlet {
 
 
 
+    // doGet 메서드
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("요청 들어옴");
