@@ -5,6 +5,8 @@ public class Filter2 implements Filter {
     @Override
     public void doFilter(Request req, Response resp, FilterChain filterChain) {
         System.out.println("필터2 전처리");
+
+        // FilterChain에 있는 doFilter 메서드는 req와 resp를 매개변수로 받아서
         filterChain.doFilter(req, resp);
         System.out.println("필터2 후처리");
     }

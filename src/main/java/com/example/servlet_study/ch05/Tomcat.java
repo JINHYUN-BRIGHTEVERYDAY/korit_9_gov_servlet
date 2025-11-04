@@ -26,6 +26,7 @@ public class Tomcat {
         // Map 형태로
         Map<String, Servlet> servletMap = Map.of(
                 // servletA와 servletB에 대한 객체 생성된 것에 대하여 Map의 key와 Value값을 집어넣기
+                // key 값은 set한 url이 들어가야함
                 "/servlet/a", new ServletA(),
                 "/serlvet/b", new ServletB()
         );

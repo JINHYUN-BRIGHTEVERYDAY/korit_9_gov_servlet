@@ -1,9 +1,16 @@
 package com.example.servlet_study.ch05;
 
 public class Filter1 implements Filter {
+
+    // 인터페이스에 있는 doFilter 메서드를 구현하기
+    // 매개변수에 FilterChain 객체를 받도록 되어 있었음
     @Override
     public void doFilter(Request req, Response resp, FilterChain filterChain) {
         System.out.println("필터1 전처리");
+
+        /*
+        filterChain.doFilter 메서드를 호출
+        */
         filterChain.doFilter(req, resp);
         System.out.println("필터1 후처리");
     }
