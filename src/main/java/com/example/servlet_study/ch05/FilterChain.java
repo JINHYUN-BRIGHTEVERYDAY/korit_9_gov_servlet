@@ -20,8 +20,8 @@ public class FilterChain {
         // 여기서 filters는 Filter들의 리스트 형태
         if (currentOrder < filters.size()) {
 
-            // get을 받고 Filter 인터페이스에서의 매개변수 다 받아오기
-            filters.get(currentOrder++).doFilter(req, resp, this);
+                // get을 받고 Filter 인터페이스에서의 매개변수 다 받아오기
+                filters.get(currentOrder++).doFilter(req, resp, this);
             return;
         }
 

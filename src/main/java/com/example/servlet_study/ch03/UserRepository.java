@@ -53,6 +53,7 @@ public class UserRepository {
                 .findFirst()
                 // 얻어지는 것이 없으면 -> null
                 .orElseGet(() -> null);
+        // .orElse(null);
 
     }
 
