@@ -10,6 +10,8 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+data/mysql.sock
+docker/data/mysql.sock
 *.iws
 *.iml
 *.ipr
