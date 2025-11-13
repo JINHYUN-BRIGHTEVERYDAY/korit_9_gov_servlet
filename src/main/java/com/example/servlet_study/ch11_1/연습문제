@@ -1,0 +1,14 @@
+과목등록 (/courses)
+CourseDto -- 완료
+CourseServlet(doPost) -- 완료
+CouseService(save) -- 완료
+Course -- 완료
+CourseDao(insert) -- 완료
+
+
+교수조회 (/professors)
+ProfessorServlet(doGet)
+ProfessorService(getProfessors)
+Professor -- 완료
+ProfessorDao (findAll) -- 완료
+
