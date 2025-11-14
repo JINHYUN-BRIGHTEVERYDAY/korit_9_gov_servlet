@@ -25,7 +25,6 @@ public class CourseDto {
                 .classroom(classRoom)
                 .build();
                 //빌더 빌드 사용하여 불러오기
-
     }
 
 }

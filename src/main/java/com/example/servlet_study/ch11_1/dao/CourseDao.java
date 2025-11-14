@@ -35,7 +35,7 @@ public class CourseDao {
             ps.setString(7, course.getClassroom());
             ps.execute();
 
-            if (!ps.execute()) {
+            if (ps.executeUpdate() < 1) {
                 throw new SQLException();
             }
 

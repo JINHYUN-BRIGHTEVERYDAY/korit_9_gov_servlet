@@ -7,8 +7,8 @@ CourseDao(insert) -- 완료
 
 
 교수조회 (/professors)
-ProfessorServlet(doGet)
-ProfessorService(getProfessors)
+ProfessorServlet(doGet) -- 완료
+ProfessorService(getProfessors) -- 약간 보완 필요
 Professor -- 완료
 ProfessorDao (findAll) -- 완료
 

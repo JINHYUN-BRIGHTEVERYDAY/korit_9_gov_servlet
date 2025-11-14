@@ -36,7 +36,7 @@ public class StudentDao {
             ps.execute(); // 쿼리 실행하세요
 
 
-            if (!ps.execute()) {
+            if (ps.executeUpdate() < 1) {
                 throw new SQLException();
             }
 

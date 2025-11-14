@@ -10,7 +10,10 @@ import java.nio.charset.StandardCharsets;
 public class EncodingFilter implements Filter {
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    // filterChain까지 매개변수로 사용
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+            // 예외 처리
+            throws IOException, ServletException {
 
         // 요청 데이터를 인코딩하기 위해서
         request.setCharacterEncoding(StandardCharsets.UTF_8.name());

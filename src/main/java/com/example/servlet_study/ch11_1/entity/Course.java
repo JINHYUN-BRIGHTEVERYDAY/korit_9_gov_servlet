@@ -4,6 +4,8 @@ package com.example.servlet_study.ch11_1.entity;
 import lombok.Builder;
 import lombok.Data;
 
+
+// Entity 역할 수행
 @Data
 @Builder
 public class Course {

@@ -14,9 +14,8 @@ public class CourseService {
 
     public Course save(CourseDto courseDto) {
 
-        Course course = courseDto.toEntity();
-        courseDao.insert(course);
-        // courseDao가 문제가 되는 상황
-        return course;
+            Course course = courseDto.toEntity();
+            courseDao.insert(course);
+            return course;
     }
 }

@@ -15,10 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
 @WebServlet("/courses")
 public class CourseServlet extends HttpServlet {
     private CourseService courseService;
     private ObjectMapper objectMapper;
+
 
     @Override
     public void init() throws ServletException {
@@ -26,9 +28,11 @@ public class CourseServlet extends HttpServlet {
         objectMapper = new ObjectMapper();
     }
 
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         CourseDto courseDto = objectMapper.readValue(req.getInputStream(), CourseDto.class);
+
 
         // 앞서 서비스 객체 생성하였음
         Course savedCourse = courseService.save(courseDto);
