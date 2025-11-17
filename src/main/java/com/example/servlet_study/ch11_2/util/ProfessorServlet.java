@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+
 // 톰캣이 웹을 찾아갈 수 있게끔
 @WebServlet("/professors")
 public class ProfessorServlet extends HttpServlet {
@@ -36,6 +37,9 @@ public class ProfessorServlet extends HttpServlet {
 
         ProfessorService professorService = new ProfessorService();
         List<Professor> professors = professorService.getProfessors(q);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(resp.getWriter(), professors);
 
 
     }
